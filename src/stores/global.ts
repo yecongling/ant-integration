@@ -5,9 +5,5 @@ class Global {
     constructor() {
         makeAutoObservable(this);
     }
-
-    setToken = (token: string) => {
-        this.token = token;
-    }
 }
 export default new Global();
