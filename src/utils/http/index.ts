@@ -6,10 +6,10 @@ import {AxiosTransform, CreateAxiosOptions} from "@/utils/http/axiosTransform";
 import {RAxios} from "@/utils/http/Axios";
 import {deepMerge, setObjToUrlParams} from "@/utils";
 import {AxiosResponse} from "axios";
-import {RequestOptions, Result} from "/#/axios";
+import {RequestOptions, Result} from "@/types/axios";
 import {ContentTypeEnum, RequestEnum, ResultEnum} from "@/enums/httpEnum";
 import {message as MessageApi, Modal} from "antd";
-import {setToken} from "@/stores/modules/global/action";
+// import {setToken} from "@/stores/modules/global/action";
 import {isString} from "@/utils/is";
 import {joinTimestamp} from "@/utils/http/helper";
 
@@ -51,7 +51,7 @@ const transform: AxiosTransform = {
         switch (code) {
             case ResultEnum.TIMEOUT:
                 timeoutMsg = "接口请求超时";
-                setToken("");
+                // setToken("");
                 window.location.href = "/login";
                 break;
             default:

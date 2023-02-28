@@ -3,7 +3,7 @@
 import axios, {AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse} from "axios";
 import {CreateAxiosOptions} from "./axiosTransform";
 import {cloneDeep} from "lodash-es";
-import {RequestOptions, Result} from "/#/axios";
+import {RequestOptions, Result} from "@/types/axios";
 import {isFunction} from "@/utils/is";
 
 export class RAxios {

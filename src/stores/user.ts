@@ -1,12 +1,9 @@
 import {makeAutoObservable} from "mobx";
 
-class Global {
-    token: string = "123";
-    authRouter: any = [];
-
+class User {
+    route: any = [];
     constructor() {
         makeAutoObservable(this);
     }
 }
-
-export default new Global();
+export default new User();

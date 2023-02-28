@@ -1,6 +1,6 @@
 /* 数据处理 */
 import {AxiosRequestConfig, AxiosResponse} from "axios";
-import {RequestOptions, Result} from "/#/axios";
+import {RequestOptions, Result} from "@/types/axios";
 
 export interface CreateAxiosOptions extends AxiosRequestConfig {
     authenticationScheme?: string
