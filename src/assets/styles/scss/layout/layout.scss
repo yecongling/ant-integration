@@ -1,0 +1,96 @@
+@import "../common/mixin.scss";
+.login-user:hover {
+  //background: #f0f1f2;
+}
+.logout-item {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+}
+.logout-item:hover {
+  background: #f0f1f2;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.not-list {
+  width: 300px !important;
+  max-height: 400px !important;
+  overflow: auto !important;
+}
+
+.not-list-item {
+  overflow: hidden !important;
+  cursor: pointer !important ;
+}
+.not-list-item:hover {
+  background: #f2f2f2;
+  color: rgba(0, 0, 0, 0.85);
+}
+.not-list-item-title {
+  font-weight: normal !important;
+}
+.not-list-item-time {
+  float: right;
+  margin-top: -1.5px;
+  margin-right: 0;
+  font-weight: normal;
+}
+
+.not-list-item-description {
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 10px;
+  color: #666666;
+}
+
+
+.tagsView-container {
+  white-space: nowrap;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  border-bottom: 1px solid #d8dce5;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
+  background: $layout-header-background;
+  .tags-wrap {
+    padding: 0;
+    & > li {
+      display: inline-block;
+      &:first-of-type {
+        margin-left: 15px;
+      }
+      &:last-of-type {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+.scrollbar-container {
+  overflow-y: hidden !important;
+}
+.scrollbar-track-vertical {
+  visibility: hidden !important;
+}
+.contextmenu {
+  margin: 0;
+  background: #fff;
+  z-index: 3000;
+  position: absolute;
+  list-style-type: none;
+  padding: 5px 0;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, .3);
+  li {
+    margin: 0;
+    padding: 0px 16px;
+    height: 30px;
+    cursor: pointer;
+    &:hover {
+      background: #eee;
+    }
+  }
+}

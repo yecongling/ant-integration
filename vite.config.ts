@@ -1,10 +1,22 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import react from '@vitejs/plugin-react'
 import * as path from "path";
+import {viteMockServe} from "vite-plugin-mock";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    viteMockServe({
+      mockPath: "./src/mock",
+      watchFiles: true,
+      injectCode: `
+                  import { setupProdMockServer } from './mockProdServer';
+                  setupProdMockServer();
+                `,
+      logger: false
+    })
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, "./src")
