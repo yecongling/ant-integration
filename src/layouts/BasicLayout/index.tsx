@@ -7,13 +7,18 @@ import Content from "@/layouts/Content";
 const BasicLayout: React.FC = () => {
   return (
     <Layout style={{height: '100%'}}>
-      {/* 左边菜单部分 */}
-      <LeftMenu/>
       <Layout>
-        {/* 头部 */}
-        <Header/>
-        {/* 中间内容区域 */}
-        <Content/>
+        {/* 左边菜单 */}
+        <LeftMenu/>
+        <Layout>
+          {/* 顶部 */}
+          <Header/>
+          {/*<div className="tagsView-container">
+                        <TagList/>
+                    </div>*/}
+          {/* 中间内容区域 */}
+          <Content/>
+        </Layout>
       </Layout>
     </Layout>
   )
