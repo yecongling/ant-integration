@@ -7,6 +7,8 @@ import BasicLayout from "@/layouts/BasicLayout";
 import Login from "@/views/user/Login";
 import {lazy} from "react";
 import lazyLoad from "@/utils/lazyLoad";
+// * 动态导入router
+const modules: any = import.meta.glob("@/views/**/*.tsx", { eager: true });
 
 export const rootRouter: RouteItem[] = [
   {
