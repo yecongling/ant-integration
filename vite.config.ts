@@ -5,10 +5,26 @@ import {viteMockServe} from "vite-plugin-mock";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      "/userApi": {
+        target: "http://localhost:8082",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/userApi/, "")
+      },
+      "/permissionApi": {
+        target: "http://localhost:8082",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/permissionApi/, "")
+      }
+    }
+  },
   plugins: [
     react(),
     viteMockServe({
       mockPath: "./src/mock",
+      localEnabled: false,
+      prodEnabled: false,
       watchFiles: true,
       injectCode: `
                   import { setupProdMockServer } from './mockProdServer';
