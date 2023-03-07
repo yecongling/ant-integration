@@ -23,7 +23,7 @@ export default defineConfig({
     react(),
     viteMockServe({
       mockPath: "./src/mock",
-      localEnabled: false,
+      localEnabled: true,
       prodEnabled: false,
       watchFiles: true,
       injectCode: `

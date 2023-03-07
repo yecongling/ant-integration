@@ -99,21 +99,19 @@ const Header: React.FC = ({global}: any) => {
                 </span>
         <div className="dis-fl js-sb ai-ct">
           <Space style={{cursor: 'pointer'}} size="middle">
-            <Dropdown menu={{items}} placement="bottomRight">
-              <div className="login-user"
-                   style={{
-                     display: 'flex',
-                     alignItems: 'center',
-                     justifyContent: 'center',
-                     width: 30,
-                     height: 30,
-                     transition: 'all 0.3s'
-                   }}>
-                <Badge>
-                  <BellOutlined style={{verticalAlign: 'middle', cursor: 'pointer', padding: '4px'}}/>
-                </Badge>
-              </div>
-            </Dropdown>
+            <div className="login-user"
+                 style={{
+                   display: 'flex',
+                   alignItems: 'center',
+                   justifyContent: 'center',
+                   width: 20,
+                   height: 30,
+                   transition: 'all 0.3s'
+                 }} title="通知">
+              <Badge>
+                <BellOutlined style={{verticalAlign: 'middle', cursor: 'pointer', padding: '4px'}}/>
+              </Badge>
+            </div>
             <SettingOutlined style={{verticalAlign: 'middle', cursor: 'pointer'}} title="系统设置"
                              onClick={changeSetting}/>
             <Dropdown menu={{items}} placement="bottom">
