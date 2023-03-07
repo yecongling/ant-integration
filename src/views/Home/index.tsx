@@ -57,7 +57,6 @@ const Index: React.FC = () => {
       },
     ],
     statistic: {
-      title: false,
       content: {
         style: {
           whiteSpace: 'pre-wrap',
@@ -69,8 +68,6 @@ const Index: React.FC = () => {
     },
   };
 
-  // @ts-ignore
-  // @ts-ignore
   return (
     <>
       <Card
