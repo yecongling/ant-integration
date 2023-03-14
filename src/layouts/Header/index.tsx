@@ -1,16 +1,19 @@
 import React, {useState} from "react";
-import {Avatar, Badge, Dropdown, Layout, MenuProps, Modal, Space} from "antd";
+import {Avatar, Badge, Dropdown, Layout, MenuProps, Modal, Space, Tooltip} from "antd";
 import {inject, observer} from "mobx-react";
+import avatar from "@/assets/images/avatar.png";
 import {
   BellOutlined,
-  ExclamationCircleOutlined,
+  ExclamationCircleOutlined, GithubOutlined,
   LogoutOutlined,
   MenuFoldOutlined,
-  MenuUnfoldOutlined,
+  MenuUnfoldOutlined, SearchOutlined,
   SettingOutlined, UserOutlined
 } from "@ant-design/icons";
 import {useNavigate} from "react-router-dom";
 import Setting from "@/layouts/Setting";
+import FullScreen from "@/component/header/FullScreen";
+import BreadcrumbNav from "@/component/header/BreadcrumbNav";
 
 const Header: React.FC = ({global}: any) => {
   const {isCollapse, setCollapse, setToken} = global;
@@ -97,23 +100,24 @@ const Header: React.FC = ({global}: any) => {
                         {React.createElement(isCollapse ? MenuUnfoldOutlined : MenuFoldOutlined)}
                     </div>
                 </span>
+        <BreadcrumbNav/>
         <div className="dis-fl js-sb ai-ct">
-          <Space style={{cursor: 'pointer'}} size="middle">
-            <div className="login-user"
-                 style={{
-                   display: 'flex',
-                   alignItems: 'center',
-                   justifyContent: 'center',
-                   width: 20,
-                   height: 30,
-                   transition: 'all 0.3s'
-                 }} title="通知">
-              <Badge>
-                <BellOutlined style={{verticalAlign: 'middle', cursor: 'pointer', padding: '4px'}}/>
+          <Space size="large">
+            <Tooltip placement="bottom" title="搜索">
+              <SearchOutlined style={{cursor: 'pointer', fontSize: '18px'}}/>
+            </Tooltip>
+            <Tooltip placement="bottom" title="github">
+              <GithubOutlined style={{cursor: 'pointer', fontSize: '18px'}}/>
+            </Tooltip>
+            <Tooltip placement="bottom" title="通知">
+              <Badge count={5}>
+                <BellOutlined style={{cursor: 'pointer', fontSize: '18px'}}/>
               </Badge>
-            </div>
-            <SettingOutlined style={{verticalAlign: 'middle', cursor: 'pointer'}} title="系统设置"
-                             onClick={changeSetting}/>
+            </Tooltip>
+            <FullScreen/>
+            <Tooltip placement="bottom" title="系统设置">
+              <SettingOutlined style={{cursor: 'pointer', fontSize: '18px'}} onClick={changeSetting}/>
+            </Tooltip>
             <Dropdown menu={{items}} placement="bottom">
               <div className="login-user" style={{
                 display: 'flex',
@@ -122,7 +126,7 @@ const Header: React.FC = ({global}: any) => {
                 height: 50,
                 transition: 'all 0.3s'
               }}>
-                <Avatar size="small" icon={<UserOutlined/>}/>
+                <Avatar size="default" src={avatar}/>
                 <span style={{margin: '0 0 0 6px'}}>叶丛林</span>
               </div>
             </Dropdown>

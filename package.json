@@ -29,6 +29,7 @@
     "react-router-dom": "^6.8.2",
     "recoil": "^0.7.6",
     "sass": "^1.58.3",
+    "screenfull": "^6.0.2",
     "vite-plugin-mock": "^2.9.6"
   },
   "devDependencies": {

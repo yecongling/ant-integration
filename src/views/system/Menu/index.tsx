@@ -140,9 +140,64 @@ const Menu: React.FC = () => {
                     key: 3,
                     name: '菜单管理',
                     menu_type: 2,
-                    icon: 'SettingOutlined',
+                    icon: 'MenuOutlined',
                     component: '/system/Menu',
                     url: '/system/menu',
+                    sort_no: 3
+                },
+                {
+                    key: 4,
+                    name: '角色管理',
+                    menu_type: 2,
+                    icon: 'UsergroupDeleteOutlined',
+                    component: '/system/Role',
+                    url: '/system/role',
+                    sort_no: 3
+                },
+                {
+                    key: 5,
+                    name: '用户管理',
+                    menu_type: 2,
+                    icon: 'UserOutlined',
+                    component: '/system/User',
+                    url: '/system/user',
+                    sort_no: 3
+                }
+            ]
+        },{
+            key: 6,
+            name: '系统管理',
+            menu_type: 1,
+            icon: 'SettingOutlined',
+            component: '/system',
+            url: '/system',
+            sort_no: 2,
+            children: [
+                {
+                    key: 7,
+                    name: '菜单管理',
+                    menu_type: 2,
+                    icon: 'MenuOutlined',
+                    component: '/system/Menu',
+                    url: '/system/menu',
+                    sort_no: 3
+                },
+                {
+                    key: 8,
+                    name: '角色管理',
+                    menu_type: 2,
+                    icon: 'UsergroupDeleteOutlined',
+                    component: '/system/Role',
+                    url: '/system/role',
+                    sort_no: 3
+                },
+                {
+                    key: 9,
+                    name: '用户管理',
+                    menu_type: 2,
+                    icon: 'UserOutlined',
+                    component: '/system/User',
+                    url: '/system/user',
                     sort_no: 3
                 }
             ]

@@ -36,7 +36,7 @@ export default [
                             "meta": {
                                 "keepAlive": false,
                                 "internalOrExternal": false,
-                                "icon": "SettingOutlined",
+                                "icon": "MenuOutlined",
                                 "componentName": "Menu",
                                 "title": "菜单管理"
                             },
@@ -49,7 +49,7 @@ export default [
                             "meta": {
                                 "keepAlive": false,
                                 "internalOrExternal": false,
-                                "icon": "SettingOutlined",
+                                "icon": "UsergroupDeleteOutlined",
                                 "componentName": "Role",
                                 "title": "角色管理"
                             },
@@ -77,7 +77,22 @@ export default [
                         },
                         "name": "system",
                         "id": "d7d6e2e4e2934f2c9385a623fd98c6f3"
+                    }, {
+                        "redirect": null,
+                        "path": "/resource",
+                        "component": "",
+                        "route": "1",
+                        "children": [],
+                        "meta": {
+                            "keepAlive": false,
+                            "internalOrExternal": false,
+                            "icon": "SettingOutlined",
+                            "title": "资源管理"
+                        },
+                        "name": "system",
+                        "id": "d7d6e2e4e2934f2c9385a623fd98c6f3"
                     }
+
                 ]
             }
         }

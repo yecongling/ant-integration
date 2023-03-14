@@ -118,8 +118,8 @@ const LeftMenu: React.FC = ({global}: any) => {
                   '' : <p style={{
                     fontWeight: 'bold',
                     margin: '0 12px',
-                    fontSize: '16px',
-                    color: 'white'
+                    fontSize: '20px',
+                    color: '#3bbfff'
                   }}>
                     {AdminConfig.ADMIN_NAME}
                   </p>

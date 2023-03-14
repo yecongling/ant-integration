@@ -7,7 +7,6 @@ import Content from "@/layouts/Content";
 const BasicLayout: React.FC = () => {
   return (
     <Layout style={{height: '100%'}}>
-      <Layout>
         {/* 左边菜单 */}
         <LeftMenu/>
         <Layout>
@@ -19,7 +18,6 @@ const BasicLayout: React.FC = () => {
           {/* 中间内容区域 */}
           <Content/>
         </Layout>
-      </Layout>
     </Layout>
   )
 }
