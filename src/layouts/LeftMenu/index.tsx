@@ -130,11 +130,10 @@ const LeftMenu: React.FC = ({global}: any) => {
               <Menu
                 theme="dark"
                 mode="inline"
-                triggerSubMenuAction="hover"
                 selectedKeys={selectedKeys}
-                openKeys={openKeys}
                 items={menuList}
                 onClick={clickMenu}
+                inlineCollapsed={global.isCollapse}
                 onOpenChange={onOpenChange}
               ></Menu>
             </Spin>
