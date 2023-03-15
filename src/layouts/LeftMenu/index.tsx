@@ -67,7 +67,7 @@ const LeftMenu: React.FC = ({global}: any) => {
   useEffect(() => {
     setSelectedKeys([pathname]);
     let openKey = getOpenKeys(pathname);
-    openKey.length > 0 && setOpenKeys(openKey);
+    !global.isCollapse && setOpenKeys(openKey);
   }, [pathname, global.isCollapse]);
 
   // 设置当前展开的 subMenu
@@ -131,6 +131,7 @@ const LeftMenu: React.FC = ({global}: any) => {
                 theme="dark"
                 mode="inline"
                 selectedKeys={selectedKeys}
+                openKeys={openKeys}
                 items={menuList}
                 onClick={clickMenu}
                 inlineCollapsed={global.isCollapse}
